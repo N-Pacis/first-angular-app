@@ -1,0 +1,12 @@
+
+<h1>{{title}} Authors</h1>
+<button class="btn btn-success" (click)="addInstructor()">Add</button>
+<ul>
+  <li *ngFor="let author of authors; index as i">{{i}}-{{author.name}} <button class="btn btn-danger" (click)="removeInstructor(author)">Remove</button></li>
+</ul>
+
+<img [src]="imageUrl" alt="author">
+<div (click)="onDivClicked()">
+  <button class="btn btn-primary" [class.btn-danger]="isActive" (click)="onLike($event)">Like</button>
+  <input [(ngModel)]="email" (keyup.enter) = "onKeyUp()">
+</div>

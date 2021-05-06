@@ -1,14 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
-@import "~bootstrap-icons/font/bootstrap-icons.css";
-
-body{
-  padding: 20px;
-}
 .form-control.ng-touched.ng-invalid{
   border: 1px solid #f83030;
   animation:shake 0.2s ease-in-out;
-  box-shadow: none;
 }
 @keyframes shake {
   0% { margin-left: 0%; }
@@ -16,4 +8,3 @@ body{
   75% { margin-left: -0.5%; }
   100% { margin-left: 0%; }
 }
-

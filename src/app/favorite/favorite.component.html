@@ -1,0 +1,8 @@
+<span
+  class="bi"
+  [ngClass]="{
+     'bi-star-fill':isFavorite,
+     'bi-star':!isFavorite
+  }"
+  (click)="toggleFavorite()"
+></span>

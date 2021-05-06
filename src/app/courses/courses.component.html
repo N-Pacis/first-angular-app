@@ -1,0 +1,17 @@
+<h2>{{course.title | uppercase }}</h2>
+<p><b>Students:</b>{{course.students | number}}</p>
+<p><b>Rating:</b>{{course.rating | number:'1.2-2'}}</p>
+<p><b>Price:</b>{{course.price | currency:'USD':'symbol-narrow':'3.2-2'}}</p>
+<p><b>Release Date:</b>{{course.releaseDate | date:'shortDate'}}</p>
+<p><b>Description:</b>{{course.description | summary:10}}</p>
+<input type="text" [(ngModel)]="enteredInputText">
+<p>{{enteredInputText | titleCasing}}</p>
+
+<div *ngIf="course.rating < 5; then noPayMessage else payMessage"></div>
+<ng-template #noPayMessage>
+  <p>You don't have to pay</p>
+</ng-template>
+<ng-template #payMessage>
+  <p>You have to pay</p>
+</ng-template>
+<input type="text" [appInputFormat]="'uppercase'" style="display: block">
